@@ -166,33 +166,10 @@ class Message
     {
         return $this->contentAvailable;
     }
-    
-    /**
-     * Set content available
-     *
-     * @param bool $contentAvailable
-     * @return Message
-     */
-    public function setContentAvailable($contentAvailable)
-    {
-        $this->contentAvailable = (bool) $contentAvailable;
-    
-        return $this;
-    }
-    
-    /**
-     * Get content available
-     *
-     * @return boolean
-     */
-    public function getContentAvailable()
-    {
-        return $this->contentAvailable;
-    }
 
     /**
      * 
-     * @param array $notification
+     * @param Notification $notification
      * @return Message
      */
     public function setNotification($notification)
