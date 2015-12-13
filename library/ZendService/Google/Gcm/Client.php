@@ -172,7 +172,7 @@ class Client
             ->setRawBody($obj->toJson())
             ->setEncType('application/json')
             ->send();
-        
+
         switch ($response->getStatusCode()) {
             case 500:
                 throw new Exception\RuntimeException('500 Internal Server Error');
@@ -188,7 +188,7 @@ class Client
                 throw new Exception\RuntimeException('401 Forbidden; Authentication Error');
                 break;
             case 400:
-                throw new Exception\RuntimeException('400 Bad Request; ' . Json::decode($response->getBody(), Json::TYPE_ARRAY)['error']);
+                throw new Exception\RuntimeException('400 Bad Request; ' . Json::decode($response->getBody(), Json::TYPE_ARRAY));
                 break;
         }
         

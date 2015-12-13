@@ -369,40 +369,40 @@ class Notification
     {
         $array = array();
         if ($this->title) {
-            $json['title'] = $this->title;
+            $array['title'] = $this->title;
         }
         if ($this->body) {
-            $json['body'] = $this->body;
+            $array['body'] = $this->body;
         }
         if ($this->icon) {
-            $json['icon'] = $this->icon;
+            $array['icon'] = $this->icon;
         }
         if ($this->sound) {
-            $json['sound'] = $this->sound;
+            $array['sound'] = $this->sound;
         }
         if ($this->badge) {
-            $json['badge'] = $this->badge;
+            $array['badge'] = $this->badge;
         }
         if ($this->tag) {
-            $json['tag'] = $this->tag;
+            $array['tag'] = $this->tag;
         }
         if ($this->color) {
-            $json['color'] = $this->color;
+            $array['color'] = $this->color;
         }
         if ($this->clickAction) {
-            $json['click_action'] = $this->clickAction;
+            $array['click_action'] = $this->clickAction;
         }
         if ($this->bodyLocKey) {
-            $json['body_loc_key'] = $this->bodyLocKey;
+            $array['body_loc_key'] = $this->bodyLocKey;
         }
         if ($this->bodyLocArgs) {
-            $json['body_loc_args'] = $this->bodyLocArgs;
+            $array['body_loc_args'] = $this->bodyLocArgs;
         }
         if ($this->titleLocKey) {
-            $json['title_loc_key'] = $this->titleLocKey;
+            $array['title_loc_key'] = $this->titleLocKey;
         }
         if ($this->titleLocArgs) {
-            $json['title_loc_args'] = $this->titleLocArgs;
+            $array['title_loc_args'] = $this->titleLocArgs;
         }
         
         return $array;
