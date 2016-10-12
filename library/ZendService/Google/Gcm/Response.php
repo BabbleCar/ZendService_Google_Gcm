@@ -135,19 +135,13 @@ class Response
      */
     public function setResponse(array $response)
     {
-        if (!isset($response['results']) ||
-            !isset($response['success']) ||
-            !isset($response['failure']) ||
-            !isset($response['canonical_ids']) ||
-            !isset($response['multicast_id'])) {
-            throw new Exception\InvalidArgumentException('Response did not contain the proper fields');
-        }
         $this->response = $response;
-        $this->results = $response['results'];
-        $this->cntSuccess = (int) $response['success'];
-        $this->cntFailure = (int) $response['failure'];
-        $this->cntCanonical = (int) $response['canonical_ids'];
-        $this->id = (int) $response['multicast_id'];
+        $this->results = isset($response['results']) ? $response['results'] : null;
+        $this->cntSuccess =  isset($response['success']) ? (int) $response['success'] : 0;   
+        $this->cntFailure = isset($response['failure']) ? (int)  $response['failure'] : 0;  
+        $this->cntCanonical =  isset($response['canonical_ids']) ? (int) $response['canonical_ids'] : 0;
+        $this->id =  isset($response['multicast_id']) ? (int) $response['multicast_id'] : 0;
+        
         return $this;
     }
 

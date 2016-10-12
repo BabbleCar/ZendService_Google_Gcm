@@ -29,7 +29,7 @@ class Client
     /**
      * @const string Server URI
      */
-    const SERVER_URI = 'https://gcm-http.googleapis.com/gcm/send';
+    const SERVER_URI = 'https://fcm.googleapis.com/fcm/send';
 
     /**
      * @const string Server URI DEVICE GROUP
@@ -109,7 +109,7 @@ class Client
     /**
      * Get HTTP Client
      *
-     * @return Zend\Http\Client
+     * @return \Zend\Http\Client
      */
     public function getHttpClient()
     {
@@ -130,6 +130,7 @@ class Client
     public function setHttpClient(HttpClient $http)
     {
         $this->httpClient = $http;
+        
         return $this;
     }
 
@@ -188,7 +189,7 @@ class Client
                 throw new Exception\RuntimeException('401 Forbidden; Authentication Error');
                 break;
             case 400:
-                throw new Exception\RuntimeException('400 Bad Request; ' . Json::decode($response->getBody(), Json::TYPE_ARRAY));
+                throw new Exception\RuntimeException('400 Bad Request; ' . Json::decode($response->getBody(), Json::TYPE_ARRAY)['error']);
                 break;
         }
         

@@ -11,7 +11,6 @@
 
 namespace ZendService\Google\Gcm;
 
-use ZendService\Google\Exception;
 use Zend\Json\Json;
 
 /**

@@ -11,7 +11,6 @@
 
 namespace ZendService\Google\Gcm;
 
-use ZendService\Google\Exception;
 use Zend\Json\Json;
 
 /**
@@ -48,17 +47,17 @@ class Notification
     /**
      * @var string
      */
-    protected $badge;
-    
-    /**
-     * @var string
-     */
     protected $tag;
     
     /**
      * @var string
      */
     protected $color;
+    
+    /**
+     * @var string
+     */
+    protected $badge;
     
     /**
      * @var string
@@ -76,7 +75,7 @@ class Notification
     protected $bodyLocArgs;
     
     /**
-     * @var string  
+     * @var string
      */
     protected $titleLocKey;
     
@@ -84,6 +83,25 @@ class Notification
      * @var array
      */
     protected $titleLocArgs;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+    
+
+    
+
+    
+
     
     /**
      * Get notification title
