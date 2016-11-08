@@ -84,25 +84,6 @@ class Notification
      */
     protected $titleLocArgs;
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-
-
-    
-
-    
-
-    
-
-    
     /**
      * Get notification title
      *

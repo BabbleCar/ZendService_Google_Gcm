@@ -404,7 +404,7 @@ class Message
      */
     public function setNotification($notification)
     {
-        if (!$notification instanceof Notification) {
+        if ($notification && !$notification instanceof Notification) {
             throw new Exception\InvalidArgumentException('$notification must be a instance of Notification');
         }
         
