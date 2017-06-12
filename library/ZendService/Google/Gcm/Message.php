@@ -25,22 +25,22 @@ use Zend\Json\Json;
  */
 class Message
 {
-    
+
     /**
      * @const Notification PRIORITY normal
      */
     const PRIORITY_NORMAL = 'normal';
-    
+
     /**
      * @const Notification PRIORITY high
      */
     const PRIORITY_HIGH = 'high';
-    
+
     /**
      * @var string
      */
     protected $to;
-    
+
     /**
      * @var string
      */
@@ -50,13 +50,13 @@ class Message
      * @var bool
      */
     protected $contentAvailable;
-    
+
     /**
-     * 
+     *
      * @var Notification
      */
     protected $notification;
-    
+
     /**
      * @var array
      */
@@ -93,8 +93,8 @@ class Message
     protected $dryRun = false;
 
     /**
-     * Set recipient of a message. 
-     * 
+     * Set recipient of a message.
+     *
      * @param string $to
      * @return Message
      */
@@ -104,21 +104,21 @@ class Message
 
         return $this;
     }
-    
+
     /**
      * Get recipient of a message.
-     * 
+     *
      * @return string
      */
     public function getTo()
     {
         return $this->to;
     }
-  
+
     /**
      * Set the priority of the message.
      * Valid values are "normal" and "high."
-     * 
+     *
      * @param string $priority
      * @return Message
      */
@@ -127,15 +127,15 @@ class Message
         if($priority !== self::PRIORITY_HIGH && $priority !== self::PRIORITY_NORMAL) {
             throw new Exception\InvalidArgumentException('$priority must be "normal" or "high"');
         }
-        
+
         $this->priority = $priority;
 
         return $this;
     }
-    
+
     /**
      * Get the priority of the message.
-     * 
+     *
      * @return string
      */
     public function getPriority()
@@ -143,43 +143,6 @@ class Message
         return $this->priority;
     }
 
-
-    /**
-     * Set content available
-     * 
-     * @param bool $contentAvailable
-     * @return Message
-     */
-    public function setContentAvailable($contentAvailable)
-    {
-        $this->contentAvailable = (bool) $contentAvailable;
-    
-        return $this;
-    }
-    
-    /**
-     * Get content available
-     * 
-     * @return boolean
-     */
-    public function getContentAvailable()
-    {
-        return $this->contentAvailable;
-    }
-    
-    /**
-     * Set content available
-     *
-     * @param bool $contentAvailable
-     * @return Message
-     */
-    public function setContentAvailable($contentAvailable)
-    {
-        $this->contentAvailable = (bool) $contentAvailable;
-    
-        return $this;
-    }
-    
     /**
      * Get content available
      *
@@ -191,7 +154,20 @@ class Message
     }
 
     /**
-     * 
+     * Set content available
+     *
+     * @param bool $contentAvailable
+     * @return Message
+     */
+    public function setContentAvailable($contentAvailable)
+    {
+        $this->contentAvailable = (bool) $contentAvailable;
+
+        return $this;
+    }
+
+    /**
+     *
      * @param array $notification
      * @return Message
      */
@@ -200,21 +176,21 @@ class Message
         if (!$notification instanceof Notification) {
             throw new Exception\InvalidArgumentException('$notification must be a instance of Notification');
         }
-        
+
         $this->notification = $notification;
-    
+
         return $this;
     }
-    
+
     /**
-     * 
+     *
      * @return Notification
      */
     public function getNotification()
     {
         return $this->notification;
     }
-    
+
     /**
      * Set Registration Ids
      *
