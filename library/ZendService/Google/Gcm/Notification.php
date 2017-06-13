@@ -29,62 +29,62 @@ class Notification
      * @var string
      */
     protected $title;
-    
+
     /**
      * @var string
      */
     protected $body;
-    
+
     /**
      * @var string
      */
     protected $icon;
-    
+
     /**
      * @var string
      */
     protected $sound;
-    
+
     /**
      * @var string
      */
     protected $badge;
-    
+
     /**
      * @var string
      */
     protected $tag;
-    
+
     /**
      * @var string
      */
     protected $color;
-    
+
     /**
      * @var string
      */
     protected $clickAction;
-    
+
     /**
      * @var string
      */
     protected $bodyLocKey;
-    
+
     /**
      * @var array
      */
     protected $bodyLocArgs;
-    
+
     /**
-     * @var string  
+     * @var string
      */
     protected $titleLocKey;
-    
+
     /**
      * @var array
      */
     protected $titleLocArgs;
-    
+
     /**
      * Get notification title
      *
@@ -94,7 +94,7 @@ class Notification
     {
         return $this->title;
     }
-    
+
     /**
      *
      * @param string $title
@@ -103,10 +103,10 @@ class Notification
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
-    
+
     /**
      * Get body text
      *
@@ -116,7 +116,7 @@ class Notification
     {
         return $this->body;
     }
-    
+
     /**
      * Set body text
      *
@@ -126,10 +126,10 @@ class Notification
     public function setBody($body)
     {
         $this->body = $body;
-    
+
         return $this;
     }
-    
+
     /**
      * Get notification icon
      *
@@ -139,7 +139,7 @@ class Notification
     {
         return $this->icon;
     }
-    
+
     /**
      * Set notification icon
      *
@@ -149,10 +149,10 @@ class Notification
     public function setIcon($icon)
     {
         $this->icon = $icon;
-    
+
         return $this;
     }
-    
+
     /**
      * Get sound to be played
      *
@@ -162,7 +162,7 @@ class Notification
     {
         return $this->sound;
     }
-    
+
     /**
      * Set sound to be played
      *
@@ -172,10 +172,10 @@ class Notification
     public function setSound($sound)
     {
         $this->sound = $sound;
-    
+
         return $this;
     }
-    
+
     /**
      * Get badge
      *
@@ -185,7 +185,7 @@ class Notification
     {
         return $this->badge;
     }
-    
+
     /**
      * Set badge
      *
@@ -195,10 +195,10 @@ class Notification
     public function setBadge($badge)
     {
         $this->badge = $badge;
-    
+
         return $this;
     }
-    
+
     /**
      * Get Tag
      *
@@ -208,7 +208,7 @@ class Notification
     {
         return $this->tag;
     }
-    
+
     /**
      * Set Tag
      *
@@ -218,10 +218,10 @@ class Notification
     public function setTag($tag)
     {
         $this->tag = $tag;
-    
+
         return $this;
     }
-    
+
     /**
      * Set color of the icon
      *
@@ -231,7 +231,7 @@ class Notification
     {
         return $this->color;
     }
-    
+
     /**
      * Get color of the icon
      *
@@ -241,10 +241,10 @@ class Notification
     public function setColor($color)
     {
         $this->color = $color;
-    
+
         return $this;
     }
-    
+
     /**
      * Get action associated with a user click on the notification
      *
@@ -254,7 +254,7 @@ class Notification
     {
         return $this->clickAction;
     }
-    
+
     /**
      * Set action associated with a user click on the notification
      *
@@ -264,10 +264,10 @@ class Notification
     public function setClickAction($clickAction)
     {
         $this->clickAction = $clickAction;
-    
+
         return $this;
     }
-    
+
     /**
      * Get body localization key
      *
@@ -277,7 +277,7 @@ class Notification
     {
         return $this->bodyLocKey;
     }
-    
+
     /**
      * Set body localization key
      *
@@ -287,10 +287,10 @@ class Notification
     public function setBodyLocKey($bodyLocKey)
     {
         $this->bodyLocKey = $bodyLocKey;
-    
+
         return $this;
     }
-    
+
     /**
      * Get body localization args
      *
@@ -300,7 +300,7 @@ class Notification
     {
         return $this->bodyLocArgs;
     }
-    
+
     /**
      * Set body localization args
      *
@@ -310,10 +310,10 @@ class Notification
     public function setBodyLocArgs(array $bodyLocArgs)
     {
         $this->bodyLocArgs = $bodyLocArgs;
-    
+
         return $this;
     }
-    
+
     /**
      * Get title localization key
      *
@@ -323,7 +323,7 @@ class Notification
     {
         return $this->titleLocKey;
     }
-    
+
     /**
      * Set title localization key
      *
@@ -333,30 +333,30 @@ class Notification
     public function setTitleLocKey($titleLocKey)
     {
         $this->titleLocKey = $titleLocKey;
-    
+
         return $this;
     }
-    
+
     /**
      * Set title localization args
-     * 
+     *
      * @return array
      */
-    public function getTitleLocArgs() 
+    public function getTitleLocArgs()
     {
         return $this->titleLocArgs;
     }
 
     /**
      * Set title localization args
-     * 
+     *
      * @param array $titleLocArgs
      * @return Notification
      */
-    public function setTitleLocArgs(array $titleLocArgs) 
+    public function setTitleLocArgs(array $titleLocArgs)
     {
         $this->titleLocArgs = $titleLocArgs;
-        
+
         return $this;
     }
 
@@ -367,44 +367,44 @@ class Notification
      */
     public function toArray()
     {
-        $array = array();
+        $array = [];
         if ($this->title) {
-            $json['title'] = $this->title;
+            $array['title'] = $this->title;
         }
         if ($this->body) {
-            $json['body'] = $this->body;
+            $array['body'] = $this->body;
         }
         if ($this->icon) {
-            $json['icon'] = $this->icon;
+            $array['icon'] = $this->icon;
         }
         if ($this->sound) {
-            $json['sound'] = $this->sound;
+            $array['sound'] = $this->sound;
         }
         if ($this->badge) {
-            $json['badge'] = $this->badge;
+            $array['badge'] = $this->badge;
         }
         if ($this->tag) {
-            $json['tag'] = $this->tag;
+            $array['tag'] = $this->tag;
         }
         if ($this->color) {
-            $json['color'] = $this->color;
+            $array['color'] = $this->color;
         }
         if ($this->clickAction) {
-            $json['click_action'] = $this->clickAction;
+            $array['click_action'] = $this->clickAction;
         }
         if ($this->bodyLocKey) {
-            $json['body_loc_key'] = $this->bodyLocKey;
+            $array['body_loc_key'] = $this->bodyLocKey;
         }
         if ($this->bodyLocArgs) {
-            $json['body_loc_args'] = $this->bodyLocArgs;
+            $array['body_loc_args'] = $this->bodyLocArgs;
         }
         if ($this->titleLocKey) {
-            $json['title_loc_key'] = $this->titleLocKey;
+            $array['title_loc_key'] = $this->titleLocKey;
         }
         if ($this->titleLocArgs) {
-            $json['title_loc_args'] = $this->titleLocArgs;
+            $array['title_loc_args'] = $this->titleLocArgs;
         }
-        
+
         return $array;
     }
     /**
