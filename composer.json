@@ -1,5 +1,5 @@
 {
-    "name": "zendframework/zendservice-google-gcm",
+    "name": "buse974/zendservice-google-gcm",
     "description": "OOP wrapper for Google Cloud Messaging",
     "type": "library",
     "keywords": [
