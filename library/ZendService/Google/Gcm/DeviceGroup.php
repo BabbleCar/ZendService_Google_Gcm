@@ -68,7 +68,7 @@ class DeviceGroup
     /**
      * Returns the notificationKeyName value.
      *
-     * @return  type
+     * @return string
      */
     public function getNotificationKeyName()
     {
@@ -78,7 +78,7 @@ class DeviceGroup
     /**
      * Set the notificationKeyName value.
      *
-     * @param type $notificationKeyName
+     * @param string $notificationKeyName
      */
     public function setNotificationKeyName($notificationKeyName)
     {
@@ -90,7 +90,7 @@ class DeviceGroup
     /**
      * Returns the notificationKey value.
      *
-     * @return  type
+     * @return string
      */
     public function getNotificationKey()
     {
@@ -100,7 +100,7 @@ class DeviceGroup
     /**
      * Set the notificationKey value.
      *
-     * @param type $notificationKey
+     * @param string $notificationKey
      */
     public function setNotificationKey($notificationKey)
     {
@@ -112,7 +112,7 @@ class DeviceGroup
     /**
      * Returns the registrationIds value.
      *
-     * @return  type
+     * @return string
      */
     public function getRegistrationIds()
     {
@@ -122,7 +122,7 @@ class DeviceGroup
     /**
      * Set the registrationIds value.
      *
-     * @param type $registrationIds
+     * @param array $registrationIds
      */
     public function setRegistrationIds(array $registrationIds)
     {

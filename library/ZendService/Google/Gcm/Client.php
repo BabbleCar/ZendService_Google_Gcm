@@ -11,6 +11,7 @@
 namespace ZendService\Google\Gcm;
 
 use ZendService\Google\Exception;
+use ZendService\Google\Exception\InvalidArgumentException;
 use Zend\Http\Client as HttpClient;
 use Zend\Json\Json;
 
@@ -38,7 +39,7 @@ class Client
 
     /**
      *
-     * @var Zend\Http\Client
+     * @var \Zend\Http\Client
      */
     protected $httpClient;
 
@@ -123,8 +124,7 @@ class Client
     /**
      * Set HTTP Client
      *
-     * @param
-     *            Zend\Http\Client
+     * @param Zend\Http\Client
      * @return Client
      */
     public function setHttpClient(HttpClient $http)
@@ -137,7 +137,7 @@ class Client
     /**
      * Send Message
      *
-     * @param Mesage $message            
+     * @param Message $message            
      * @return Response
      * @throws Exception\RuntimeException
      */
